@@ -1,0 +1,38 @@
+<div class="login" style="display: flex; flex-direction: column;">
+    <!-- <img src="logo.png" width="200px" height="200px"/> -->
+    <span class="login-panel">
+        <!-- <span class="logo">
+        </span> -->
+
+        <h3 style="text-align: center;">Login</h3>
+
+        <form class="login-fields" [formGroup]="form">
+            <div class="field">
+                <input class="field-input" type="text" pInputText formControlName="loginControl"
+                placeholder="Username" />
+            </div>
+            <div class="field">
+                <span class="p-input-icon-right">
+                    <i *ngIf="!showPassword" class="pi pi-eye" (click)="togglePassword()"></i>
+                    <i *ngIf="showPassword" class="pi pi-check" (click)="togglePassword()"></i>
+                    <input id="float-password" class="field-input" [type]="showPassword? 'text' : 'password'"
+                        pInputText formControlName="senhaControl" placeholder="Password"> 
+                </span>
+            </div>
+        </form>
+        <div class="extra-fields">
+            <span>
+                <input type="checkbox">Remember me
+         </span>
+            <a href="https://google.com.br">Forgot my password</a>
+        </div>
+        <div class="login-buttons">
+            <button type="button" class="button" [disabled]="form.invalid" (click)="logar()">Login</button>
+            <!--TODO PRECISO ADICIONAR RIPPLE -->
+        </div>
+        <div class="footer">
+            <span>Don't have an account?</span>
+            <a routerLink="/login/signup">Sign-up</a>
+        </div>
+    </span>
+</div>
