@@ -1,8 +1,5 @@
 <div class="login" style="display: flex; flex-direction: column;">
-    <!-- <img src="logo.png" width="200px" height="200px"/> -->
     <span class="login-panel">
-        <!-- <span class="logo">
-        </span> -->
 
         <h3 style="text-align: center;">Login</h3>
 
@@ -13,12 +10,12 @@
             </div>
             <div class="field">
                 <span class="p-input-icon-right">
-                    <i *ngIf="!showPassword" class="pi pi-eye" (click)="togglePassword()"></i>
-                    <i *ngIf="showPassword" class="pi pi-check" (click)="togglePassword()"></i>
+                    <i *ngIf="showPassword" class="eye-closed" (click)="togglePassword()"></i>
+                    <i *ngIf="!showPassword" class="eye" (click)="togglePassword()"></i>
                     <input id="float-password" class="field-input" [type]="showPassword? 'text' : 'password'"
-                        pInputText formControlName="senhaControl" placeholder="Password"> 
+                    pInputText formControlName="senhaControl" placeholder="Password"> 
                 </span>
-            </div>
+                </div>
         </form>
         <div class="extra-fields">
             <span>
@@ -28,7 +25,6 @@
         </div>
         <div class="login-buttons">
             <button type="button" class="button" [disabled]="form.invalid" (click)="logar()">Login</button>
-            <!--TODO PRECISO ADICIONAR RIPPLE -->
         </div>
         <div class="footer">
             <span>Don't have an account?</span>
