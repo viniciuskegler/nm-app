@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AuthModule } from './login/auth.module';
 import { SharedModule } from './core/shared-module'
-import { AppRoutingModule } from './app-routing.module'
+import { routing } from './app-routing.module'
 
 
 @NgModule({
@@ -13,7 +13,7 @@ import { AppRoutingModule } from './app-routing.module'
   imports: [
     BrowserModule,
     AuthModule,
-    AppRoutingModule,
+    routing,
     SharedModule
   ],
   providers: [],

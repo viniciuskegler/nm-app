@@ -13,7 +13,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { CommonModule } from '@angular/common';
-
+import { ToolbarModule } from 'primeng/toolbar';
 @NgModule({
   imports: [
     CommonModule,
@@ -29,7 +29,23 @@ import { CommonModule } from '@angular/common';
     MatIconModule,
     PasswordModule,
     MatToolbarModule,
+    ToolbarModule
+    
   ],
-  exports: [CommonModule]
+  exports: [CommonModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    InputTextModule,
+    FormsModule,
+    ButtonModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatIconModule,
+    PasswordModule,
+    MatToolbarModule,
+    ToolbarModule
+  ]
 })
 export class SharedModule { }
